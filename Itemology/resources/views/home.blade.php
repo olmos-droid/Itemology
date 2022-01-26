@@ -4,13 +4,8 @@
 <section class="">
     <div class="container">
         <div class="">
-
-            <h1>
-                Sweet Home, HomeController
-            </h1>
-
+            <h1> Sweet Home, HomeController </h1>
         </div>
     </div>
-
 </section>
 @endsection
