@@ -24,11 +24,11 @@ require __DIR__ . '/auth.php';
 
 Route::get('/home', HomeController::class)->middleware(['auth'])->name('home');
 
-Route::get('/', [ItemController::class, 'index'])->middleware(['auth'])->name('items.index');
-Route::post('/', [ItemController::class, 'index'])->middleware(['auth'])->name('items.index');
-Route::get('/show/{item}', [ItemController::class, 'show'])->middleware(['auth'])->name('items.show');
-Route::get('/create', [ItemController::class, 'create'])->middleware(['auth'])->name('items.create');
-Route::post('/create', [ItemController::class, 'create'])->middleware(['auth'])->name('items.create');
+Route::get('/items/index', [ItemController::class, 'index'])->middleware(['auth'])->name('items.index');
+Route::post('/items/index', [ItemController::class, 'index'])->middleware(['auth'])->name('items.index');
+Route::get('/items/show/{item}', [ItemController::class, 'show'])->middleware(['auth'])->name('items.show');
+Route::get('/items/create', [ItemController::class, 'create'])->middleware(['auth'])->name('items.create');
+Route::post('/items/create', [ItemController::class, 'create'])->middleware(['auth'])->name('items.create');
 
 Route::get('/edit/{item}', [ItemController::class, 'edit'])->middleware(['auth'])->name('items.edit');
 Route::put('/edit/{item}', [ItemController::class, 'update'])->middleware(['auth'])->name('items.update');

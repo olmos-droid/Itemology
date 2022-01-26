@@ -15,7 +15,8 @@ class SubItemController extends Controller
      */
     public function index()
     {
-        //
+        $subItem = SubItem::all();
+        return $subItem;
     }
 
     /**
