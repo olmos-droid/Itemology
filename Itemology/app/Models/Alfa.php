@@ -10,8 +10,9 @@ class Alfa extends Model
     use HasFactory;
 
     //relation muchos a muchos
-
-    public function alfa(){
-        return $this->belongsToMany('App\Models\Alfa');
+    public function beta()
+    {
+        return $this->belongsToMany('App\beta');
     }
+    
 }

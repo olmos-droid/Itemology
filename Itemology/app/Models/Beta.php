@@ -9,8 +9,9 @@ class Beta extends Model
 {
     use HasFactory;
     // relacion muchos a muchos
-    public function beta()
+    
+    public function alfa()
     {
-        return $this->belongsToMany('App\Models\beta');
+        return $this->belongsToMany('App\Alfa');
     }
 }

@@ -2,6 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\Alfa;
+use App\Models\AlfaBeta;
+use App\Models\Beta;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class AlfaBetaFactory extends Factory
@@ -14,7 +17,9 @@ class AlfaBetaFactory extends Factory
     public function definition()
     {
         return [
-            //
+            $beta=Beta::all()
+            $alfa = $beta->alfa
+
         ];
     }
 }

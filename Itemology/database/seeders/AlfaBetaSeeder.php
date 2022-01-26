@@ -2,6 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\AlfaBeta;
+use App\Models\Beta;
+use App\Models\Alfa;
 use Illuminate\Database\Seeder;
 
 class AlfaBetaSeeder extends Seeder
@@ -13,6 +16,10 @@ class AlfaBetaSeeder extends Seeder
      */
     public function run()
     {
-        //
+        
+            
+AlfaBeta::factory(50)->create();
+
+        
     }
 }

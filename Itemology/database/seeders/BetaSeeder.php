@@ -16,7 +16,7 @@ class BetaSeeder extends Seeder
      */
     public function run()
     {
-        Beta::factory(100)->create();
+        Beta::factory(5)->create();
 
     }
 }
