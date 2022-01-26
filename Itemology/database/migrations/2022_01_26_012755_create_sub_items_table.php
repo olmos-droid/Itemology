@@ -15,6 +15,7 @@ class CreateSubItemsTable extends Migration
     {
         Schema::create('sub_items', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->timestamps();
         });
     }

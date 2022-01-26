@@ -26,9 +26,9 @@
                         <li class="nav-item"><a class="nav-link" href="{{route('items.create')}}">Create Item</a></li>
 
                         <li class="nav-item">
-                            <a class="nav-item" href="{{route('items.shoppingCart')}}">
+                            <!-- <a class="nav-item" href="#"> -->
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>Shopping cart
-                                <span class="badge">{{session()->has('cart') ? session()->get('cart')->totalQty:''}}</span>
+                                <!-- <span class="badge">{{session()->has('cart') ? session()->get('cart')->totalQty:''}}</span> -->
                             </a>
                         </li>
                     </ul>

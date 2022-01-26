@@ -34,7 +34,7 @@ Route::get('/edit/{item}', [ItemController::class, 'edit'])->middleware(['auth']
 Route::put('/edit/{item}', [ItemController::class, 'update'])->middleware(['auth'])->name('items.update');
 
 
-Route::get('/addToCart/{movie}', [CartController::class, 'getAddToCart'])->Middleware(['auth'])->name('movies.addToCart');
-Route::get('/addToCart/{movie}', [CartController::class, 'getAddToCart'])->Middleware(['auth'])->name('movies.addToCart');
+// Route::get('/addToCart/{movie}', [CartController::class, 'getAddToCart'])->Middleware(['auth'])->name('movies.addToCart');
+// Route::get('/addToCart/{movie}', [CartController::class, 'getAddToCart'])->Middleware(['auth'])->name('movies.addToCart');
 
-Route::get('/shopping-cart', [CartController::class, 'getCart'])->Middleware(['auth'])->name('movies.shoppingCart');
+// Route::get('/shopping-cart', [CartController::class, 'getCart'])->Middleware(['auth'])->name('movies.shoppingCart');

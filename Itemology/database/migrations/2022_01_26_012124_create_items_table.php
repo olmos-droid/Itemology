@@ -15,6 +15,14 @@ class CreateItemsTable extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->text('synopsis');
+            $table->boolean('type')->nullable()->default(false);
+            $table->integer('duration')->unsigned()->nullable()->default(120);
+            $table->integer('year')->unsigned()->nullable()->default(1900);
+            $table->float('price')->nullable()->default(0.99);
+            $table->string('image')->nullable();
+            $table->string('file')->nullable();
             $table->timestamps();
         });
     }
