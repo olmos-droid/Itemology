@@ -1,9 +1,7 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Items') }}
-        </h2>
-    </x-slot>
+@extends('layouts.master')
+@section('title', 'Index Item')
+@section('content')
+<section>
     <div class="mt-5">
         <div class="max-w-7xl mx-auto sm:px-8 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
@@ -12,7 +10,6 @@
                         <div class="">
                             <form action="{{route('items.index')}}" class="form-inline d-flex justify-content-center" method="post">
                                 @csrf
-
                                 <i class="fas fa-search" aria-hidden="true"></i>
                                 <div class="form-group">
                                     <select class="form-control form-control-md w-10" name="bytype" onchange="submit()">
@@ -33,8 +30,6 @@
                             </form>
                         </div>
                         @foreach ($items as $item)
-
-                        @csrf
                         <div class="card m-5" style="width: 996px;">
                             <div class=" shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
                                 <a href="{{ route('items.show', $item) }}" class="stretched-link">
@@ -49,6 +44,7 @@
                                         <a class="card-text">Generos: {{$item->genere}} </a>
                                         <small>
                                             <p class="card-text">Formato:@if (($item->type==0))Movie @else Serie @endif </p>
+
                                         </small>
                                         <div class="card-text">
                                             Price : {{$item->price}}€
@@ -71,4 +67,5 @@
             </div>
         </div>
     </div>
-</x-app-layout>
+</section>
+@endsection

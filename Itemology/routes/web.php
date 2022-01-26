@@ -16,9 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+
 
 require __DIR__ . '/auth.php';
 
@@ -26,12 +24,12 @@ Route::get('/home', HomeController::class)->middleware(['auth'])->name('home');
 
 Route::get('/items/index', [ItemController::class, 'index'])->middleware(['auth'])->name('items.index');
 Route::post('/items/index', [ItemController::class, 'index'])->middleware(['auth'])->name('items.index');
-Route::get('/items/show/{item}', [ItemController::class, 'show'])->middleware(['auth'])->name('items.show');
+Route::get('/items/show{item}', [ItemController::class, 'show'])->middleware(['auth'])->name('items.show');
 Route::get('/items/create', [ItemController::class, 'create'])->middleware(['auth'])->name('items.create');
 Route::post('/items/create', [ItemController::class, 'create'])->middleware(['auth'])->name('items.create');
 
-Route::get('/edit/{item}', [ItemController::class, 'edit'])->middleware(['auth'])->name('items.edit');
-Route::put('/edit/{item}', [ItemController::class, 'update'])->middleware(['auth'])->name('items.update');
+Route::get('/items/edit/{item}', [ItemController::class, 'edit'])->middleware(['auth'])->name('items.edit');
+Route::put('/items/edit/{item}', [ItemController::class, 'update'])->middleware(['auth'])->name('items.update');
 
 
 // Route::get('/addToCart/{movie}', [CartController::class, 'getAddToCart'])->Middleware(['auth'])->name('movies.addToCart');

@@ -29,17 +29,6 @@
                             </select>
                         </label>
                     </div>
-                    <!-- <div class="col">
-                        <label for="genere">
-                            <select class="form-control" name="genere" id="genere" value="{{$item->genere}}">
-                                <option selected disabled="">Genere</option>
-                                @foreach ($generes as $genere)
-                                <option value={{$genere->id}}>{{$genere->name}}</option>
-                                @endforeach
-                            </select>
-
-                        </label>
-                    </div> -->
                     <div class="form-group mb-2 col">
                         <label for="duration">
                             <input class="form-control col-4" type="number" name="duration" id="duration" value="{{$item->duration}}" placeholder="duration/min">

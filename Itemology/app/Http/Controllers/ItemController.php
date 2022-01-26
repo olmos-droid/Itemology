@@ -35,7 +35,7 @@ class ItemController extends Controller
         //     ->get();
         // } else {
         // }
-        return view('home')->with('items', $items);
+        return view('items.index')->with('items', $items);
     }
 
     /**
@@ -84,7 +84,8 @@ class ItemController extends Controller
     {
         // $generes = Genere::all();
         // return view('show')->with('item', $item)->with('generes', $generes);
-        return view('show')->with('item', $item);
+        
+        return view('items.show')->with('item',$item);
     }
 
     /**
