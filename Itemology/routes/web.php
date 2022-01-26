@@ -15,6 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__ . '/auth.php';
+
 Route::get('/home', HomeController::class)->middleware(['auth'])->name('home');
 
 Route::get('/', [ItemController::class, 'index'])->middleware(['auth'])->name('items.index');
@@ -27,8 +34,3 @@ Route::get('/edit/{item}', [ItemController::class, 'edit'])->middleware(['auth']
 Route::put('/edit/{item}', [ItemController::class, 'update'])->middleware(['auth'])->name('items.update');
 
 
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth'])->name('dashboard');
-
-require __DIR__.'/auth.php';
