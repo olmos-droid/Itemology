@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Alfa;
+
 use Illuminate\Database\Seeder;
 
 class AlfaSeeder extends Seeder
@@ -13,6 +15,7 @@ class AlfaSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Alfa::factory(100)->create();
+
     }
 }
