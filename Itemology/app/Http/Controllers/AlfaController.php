@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreSubItemRequest;
-use App\Http\Requests\UpdateSubItemRequest;
-use App\Models\SubItem;
+use App\Http\Requests\StoreAlfaRequest;
+use App\Http\Requests\UpdateAlfaRequest;
+use App\Models\Alfa;
 
-class SubItemController extends Controller
+class AlfaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,7 @@ class SubItemController extends Controller
      */
     public function index()
     {
-        $subItem = SubItem::all();
-        return $subItem;
+        //
     }
 
     /**
@@ -32,10 +31,10 @@ class SubItemController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreSubItemRequest  $request
+     * @param  \App\Http\Requests\StoreAlfaRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreSubItemRequest $request)
+    public function store(StoreAlfaRequest $request)
     {
         //
     }
@@ -43,10 +42,10 @@ class SubItemController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\SubItem  $subItem
+     * @param  \App\Models\Alfa  $alfa
      * @return \Illuminate\Http\Response
      */
-    public function show(SubItem $subItem)
+    public function show(Alfa $alfa)
     {
         //
     }
@@ -54,10 +53,10 @@ class SubItemController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\SubItem  $subItem
+     * @param  \App\Models\Alfa  $alfa
      * @return \Illuminate\Http\Response
      */
-    public function edit(SubItem $subItem)
+    public function edit(Alfa $alfa)
     {
         //
     }
@@ -65,11 +64,11 @@ class SubItemController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateSubItemRequest  $request
-     * @param  \App\Models\SubItem  $subItem
+     * @param  \App\Http\Requests\UpdateAlfaRequest  $request
+     * @param  \App\Models\Alfa  $alfa
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateSubItemRequest $request, SubItem $subItem)
+    public function update(UpdateAlfaRequest $request, Alfa $alfa)
     {
         //
     }
@@ -77,10 +76,10 @@ class SubItemController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\SubItem  $subItem
+     * @param  \App\Models\Alfa  $alfa
      * @return \Illuminate\Http\Response
      */
-    public function destroy(SubItem $subItem)
+    public function destroy(Alfa $alfa)
     {
         //
     }

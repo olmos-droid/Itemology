@@ -2,10 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\SubItem;
 use Illuminate\Database\Seeder;
 
-class SubItemSeeder extends Seeder
+class BetaSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +13,6 @@ class SubItemSeeder extends Seeder
      */
     public function run()
     {
-        SubItem::factory(10)->create();
+        //
     }
 }
